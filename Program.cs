@@ -1,5 +1,10 @@
 using Juliana_Sosa_API_Burger.Controllers;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Juliana_Sosa_API_Burger.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<Juliana_Sosa_API_BurgerContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Juliana_Sosa_API_BurgerContext") ?? throw new InvalidOperationException("Connection string 'Juliana_Sosa_API_BurgerContext' not found.")));
 
 // Add services to the container.
 
