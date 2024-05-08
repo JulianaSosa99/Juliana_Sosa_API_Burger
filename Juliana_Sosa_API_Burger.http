@@ -1,0 +1,6 @@
+@Juliana_Sosa_API_Burger_HostAddress = http://localhost:5157
+
+GET {{Juliana_Sosa_API_Burger_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
